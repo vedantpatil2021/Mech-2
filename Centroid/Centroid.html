@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Centroid.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7c64fa9aba.js" crossorigin="anonymous"></script>
+    <title>Centroid</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">MechCal</h1>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <p class="menu cta"><i class="fas fa-bars"></i></p>
+    </header>
+    <div id="mobile__menu" class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+            <a href="#">Home</a>
+            <a href="#">Discover</a>
+            <a href="#">About Us</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="section">
+            <div class="theory">
+                <h1 class="chap_name">Centroid</h1>
+                <h3 class="definition">In simple words, we can define centroid as the geometric centre of the figure. It is sometimes also called the centre of area.</h3>
+                <h2>Procedure for obtaining Centroid :</h2>
+                <h5>For simple areas like rectangle, triangle, semicircle, etc. We can easily find the Centroid using the formulae given in the table below :</h5>
+                <img src="Image/Theory.png" alt="table" class="theory_table">
+                <p>For composite areas, which are a combination of two or more simple areas, the steps to find centroid are as follows:
+                    <br>1)Divide the given shape into standard shape.
+                    <br>2)If the co-ordinate axes are given, locate it. If not given, then assume it at convenient location.
+                    <br>3)Calculate Area and coordinate of the centroid of each individual part with reference to coordinate axes. 
+                    <br>4) The coordinates of the centroid can be calculated using:
+                </p>
+            </div>
+
+            <div class="main_content">
+                <p class="heading"><b>Area calculator</b></p>
+            <table border="1" class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <td>Shapes</td>
+                        <td colspan="3">Input</td>
+                        <td>Output</td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="table-dark">Rectangle</td>
+                    <td>breadth = <input type="number" id="breadth"></td>
+                    <td>height = <input type="number" id="height"></td>
+                    <td></td>
+                    <td><input type="numbers" id="rec-area"></td>
+                </tr>
+                <tr>
+                    <td class="table-dark">Triangle</td>
+                    <td>s1 = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="s1"></td>
+                    <td>s2 = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="s2"></td>
+                    <td>angle(s1-s2) = <input type="number" id="angle"></td>
+                    <td><input type="numbers" id="tri-area"></td>
+                </tr>
+                <tr >
+                    <td class="table-dark">Sector</td>
+                    <td>radius = &nbsp;&nbsp;&nbsp;<input type="number" id="radius"></td>
+                    <td>theta = <input type="number" id="theta"></td>
+                    <td></td>
+                    <td><input type="number" id="sec-area"></td>
+                </tr>
+                <tr >
+                    <td class="table-dark">Semicircle</td>
+                    <td><span>&#960;</span> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input value="3.1415" type="number" disabled name="" id=""></td>
+                    <td>radius = <input type="number" id="rad"></td>
+                    <td></td>
+                    <td><input type="number" id="sem-area"></td>
+                </tr>
+                <tr>
+                    <td class="table-dark">Quatercircle</td>
+                    <td><span>&#960;</span> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input value="3.1415" type="number" disabled name="" id=""></td>
+                    <td>radius = <input type="number" id="rad1"></td>
+                    <td></td>
+                    <td><input type="number" id="quatcircle-area"></td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="center" class="button_div"><button onclick="Area()" class="btn btn-dark"><span>Solve</span></button></td>
+                </tr>
+            </table>
+            <br><br>
+            <p class="heading"><b>Rules:</b></p>
+            <p class="rules">Seperate inputs with a comma(,)</p>
+            <p class="heading"><b>Centroid Calculator</b></p>
+            <table border="1" class="table">
+                <tr>
+                    <td>Area</td>
+                    <td><input type="text" id="Area"></td>
+                </tr>
+                <tr>
+                    <td>xi</td>
+                    <td><input type="text" id="xi"></td>
+                </tr>
+                <tr>
+                    <td>yi</td>
+                    <td><input type="text" id="yi"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" class="button_div"><button onclick="Centroid()" class="btn btn-dark">Solve</button></td>
+                </tr>
+            </table>
+            <br>
+            <p class="heading"><b>Answer</b></p>
+            <table border="0" class="table_3">
+                <tr>
+                    <td>X = <input type="number" id="X"></td>
+                    <td>Y = <input type="number" id="Y"></td>
+                </tr>
+            </table>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    function Area() {
+        var b = document.getElementById("breadth").value;
+        var h = document.getElementById('height').value;
+        var s1 = document.getElementById('s1').value;
+        var s2 = document.getElementById('s2').value;
+        var angle = document.getElementById('angle').value;
+        var radius = document.getElementById('radius').value;
+        var theta = document.getElementById('theta').value;
+        var rad = document.getElementById('rad').value;
+        var rad1 = document.getElementById('rad1').value;
+
+        var Rectangle = b * h;
+        var Triangle = 1 / 2 * s1 * s2 * Math.sin(angle * Math.PI / 180);
+        var Sector = (theta / 360) * Math.PI * radius * radius;
+        var semiCircle = (Math.PI * rad * rad) / 2;
+        var quad = (Math.PI * rad1 * rad1) / 4;
+
+        document.getElementById('sem-area').value = semiCircle;
+        document.getElementById('rec-area').value = Rectangle;
+        document.getElementById('tri-area').value = Triangle;
+        document.getElementById('sec-area').value = Sector;
+        document.getElementById('quatcircle-area').value = quad;
+
+    }
+
+    function Centroid() {
+        var Area = document.getElementById('Area').value;
+        var xi = document.getElementById('xi').value;
+        var yi = document.getElementById('yi').value;
+
+        var AreaArray = Area.split(",").map(function(el) {
+            return parseFloat(el);
+        });
+        var xiArray = xi.split(",").map(function(el) {
+            return parseFloat(el);
+        });
+        var yiArray = yi.split(",").map(function(el) {
+            return parseFloat(el);
+        });
+
+        var size = AreaArray.length;
+        var Aixi = 0,
+            Aiyi = 0,
+            Ai = 0,
+            X, Y;
+
+        for (c = 0; c < size; c++) {
+            Aixi += AreaArray[c] * xiArray[c];
+        }
+        for (c = 0; c < size; c++) {
+            Aiyi += AreaArray[c] * yiArray[c];
+        }
+        for (c = 0; c < size; c++) {
+            Ai += AreaArray[c];
+        }
+
+        X = Aixi / Ai;
+        Y = Aiyi / Ai;
+
+        document.getElementById('X').value = X;
+        document.getElementById('Y').value = Y;
+    }
+</script>
+    <script type="text/javascript" src="Centroid.js"></script>
+</body>
+</html>
+</body>
+</html>
